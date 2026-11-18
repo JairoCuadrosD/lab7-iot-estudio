@@ -1,0 +1,16 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: avance-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+# OJO: aquí NO aparece la URL ni el puerto de curso-service.
+# Feign + LoadBalancer la obtienen de Eureka usando el nombre lógico.

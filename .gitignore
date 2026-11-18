@@ -1,0 +1,19 @@
+# Maven
+target/
+
+# Android / Gradle
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Firebase (cada quien usa el suyo)
+google-services.json
+
+# SO
+.DS_Store
+Thumbs.db

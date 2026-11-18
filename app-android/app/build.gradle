@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services' // lee app/google-services.json
+}
+
+android {
+    namespace 'pe.edu.pucp.lab7'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'pe.edu.pucp.lab7'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '2.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // UI
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+
+    // Firebase (el BoM fija versiones compatibles entre sí)
+    implementation platform('com.google.firebase:firebase-bom:33.5.1')
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.firebaseui:firebase-ui-auth:8.0.2'
+
+    // HTTP hacia avance-service
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+
+    // Cargar imagen desde URL
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    // Gráficos
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}
